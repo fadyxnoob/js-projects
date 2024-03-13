@@ -10,8 +10,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
-    background: #fff;
+    background: #E9B44C;
+}
+.credits{
+    position: relative;
+    bottom: 50px;
+}
+.credits h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.credits h3 span{
+    color: rgb(255, 255, 255);
 }
 .box{
     position: relative;
@@ -20,6 +32,7 @@ body{
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateY(0deg);
     transition: 1.5s;
+    
 }
 
 .box::before{
@@ -34,6 +47,7 @@ body{
 }
 .box .card{
     position: absolute;
+    
     top: 0;
     left: 0;
     width: 100%;
@@ -42,13 +56,14 @@ body{
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(var(--i) * 90deg)) translateZ(120px);
-
+    border-radius: 8px;
 }
 
 .box .card .img-holder{
     position: relative;
     width: 100%;
     height: 240px;
+    border-radius: 8px;
 }
 .box .card .img-holder img{
     position: relative;
@@ -57,6 +72,7 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .box .card h2{
@@ -79,7 +95,7 @@ body{
 }
 .btns{
     position: relative;
-    top: 50px;
+    top: 100px;
     display: flex;
     justify-content: space-evenly;
    
@@ -92,7 +108,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
+    border: 1px solid #fff;
     border-radius: 50%;
     cursor: pointer;
 }
