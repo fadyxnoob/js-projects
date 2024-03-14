@@ -80,7 +80,7 @@ body{
     font-size: 1rem;
     margin-top: 10px;
 }
-
+  
 .card-footer{
     display: flex;
     justify-content: space-between;
@@ -121,4 +121,17 @@ body{
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
+}
+.new-user-btn button:active{
+    background-color: #fff;
+    color: #0fcdef;
+}
+
+.credits{
+    z-index: 10000;
+    text-align: center;
+    margin-top: 10px;
+    background:#0fcdef;
+    padding: 2px;
+    color: #fff;
 }

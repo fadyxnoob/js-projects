@@ -64,7 +64,7 @@ class RandomUser {
                     </p>
                 </div>
             </div>
-        </div>
+        </div>  
         <div class="card-footer">
             <div class="user-phone">
                 <i class="fa-solid fa-phone fa-fw"></i>
