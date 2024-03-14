@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #B0E298;
+}
+.card{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    background: #FBEEF4;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+}
+.card .card-head{
+    display: flex;
+    position: relative;
+}
+.card-head > p{
+    padding: 4px 6px;
+    background: #0fcdef;
+    color: #fff;
+    font-size: 14px;
+}
+.card-head > p >i{
+    margin-right: 5px;
+}
+.card-head .user-img{
+    height: 80px;
+    width: 80px;
+    position :absolute;
+    top: -60px;
+    left: 35%;
+    border-radius: 50%;
+}
+.card-head .user-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card .card-body,
+.card-footer{
+    margin-top: 20px;
+}
+.card-body .user-address-dets{
+    display: flex;
+    justify-content: space-around;
+}
+.card-body .user-address-dets > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.card .card-body .user-name-dets{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .card-body .user-name-dets > div > h3{
+    font-size: 1.3rem;
+    line-height: 10px;
+    text-transform: capitalize; margin-right: 10px;
+}
+.card .card-body .user-name-dets > div > p{
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+.card-footer::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: #0fcdef;
+    top: -100%;
+}
+.card-footer .user-phone{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+.card-footer .user-phone i{
+    color: #0fcdef;
+    font-size: 1rem;
+}
+
+.new-user-btn{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.new-user-btn button{
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #0fcdef;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
