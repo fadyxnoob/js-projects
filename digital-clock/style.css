@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #2f363e;
+}
+
+#clock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+#hrDots,
+#minDots,
+#secDots {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+
+#hrDots::before,
+#minDots::before,
+#secDots::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.52),
+    inset -5px -5px 20px rgba(0, 0, 0, 0.75);
+}
+#hrDots h2,
+#minDots h2,
+#secDots h2 {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  flex-direction: column;
+  color: var(--clr);
+  font-size: 4em;
+  font-weight: 500 !important;
+  transform: rotate(-90deg);
+}
+#hrDots h2 span,
+#minDots h2 span,
+#secDots h2 span {
+  position: absolute;
+  font-size: 0.25em;
+  font-weight: 500;
+  bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+#hrDots .dot,
+#secDots .dot,
+#minDots .dot {
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--clr);
+  transform-origin: 100px;
+}
+#minDots .dot:nth-child(5n + 5),
+#secDots .dot:nth-child(5n + 5) {
+  width: 20px;
+}
+#hrDots .active.dot,
+#minDots .active.dot,
+#secDots .active.dot {
+  background: var(--clr);
+  box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
+}
+#hrDots .active.dot ~ .dot,
+#minDots .active.dot ~ .dot,
+#secDots .active.dot ~ .dot {
+  background: #555;
+}
+#hrDots .dot {
+  width: 20px;
+}
+#hrDots .dot::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--clr);
+  box-shadow: 1.5px 9px var(--clr), 4px 18px var(--clr), 7px 27px var(--clr);
+}
+#hrDots .dot.active ~ .dot::before {
+  background: #555;
+  box-shadow: 1.5px 9px #555, 4px 18px #555, 7px 27px #555;
+}
+
+.credits {
+  border: 1px solid #fff;
+  margin-top: 100px;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.credits span {
+  color: #01bdab;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  #clock {
+    flex-direction: column;
+  }
+}
+
+
